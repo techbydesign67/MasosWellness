@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MASOS WELLNESS GROUP</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    @font-face {
+      font-family: 'LaChic';
+      src: url('fonts/LaChic.ttf');
+    }
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      min-height: 100vh;
+      background: url('https://i.pinimg.com/1200x/25/78/c6/2578c68f68af4fd3d974d3c9cecdf8e4.jpg') center/cover no-repeat fixed;
+      font-family: 'LaChic', serif;
+      color: #3f4f45;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      backdrop-filter: blur(12px);
+      background: rgba(191, 207, 187, 0.18);
+      z-index: -1;
+    }
+
+    /* TOP NAVIGATION */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 15px 0;
+      background: rgba(191, 207, 187, 0.35);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #5f7a66;
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    nav a i {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+
+    nav a:hover { color: #738A6E; transform: translateY(-2px); }
+
+    .container {
+      min-height: 100vh;
+      padding-top: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+    }
+
+    .company-name {
+      font-size: 4rem;
+      background: rgba(191, 207, 187, 0.45);
+      backdrop-filter: blur(10px);
+      padding: 1rem 2rem;
+      border-radius: 14px;
+      color: #738A6E;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+
+    .tagline {
+      font-size: 2.5rem;
+      background: rgba(142, 165, 140, 0.35);
+      backdrop-filter: blur(10px);
+      padding: 0.8rem 2rem;
+      border-radius: 14px;
+      color: #5f7a66;
+    }
+
+    section { padding: 90px 10%; }
+    section h2 {
+      text-align: center;
+      font-size: 2.8rem;
+      margin-bottom: 40px;
+      color: #738A6E;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+    }
+
+    .card {
+      background: linear-gradient(
+        135deg,
+        rgba(191, 207, 187, 0.55),
+        rgba(142, 165, 140, 0.45)
+      );
+      backdrop-filter: blur(12px);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+    }
+
+    .card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 14px;
+      color: #4f6656;
+    }
+
+    .card p { font-size: 0.95rem; line-height: 1.65; }
+
+    .map-container {
+      width: 100%;
+      height: 280px;
+      border-radius: 14px;
+      overflow: hidden;
+      margin-top: 12px;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* CTA SECTION */
+    .cta {
+      margin: 60px 10px;
+      padding: 40px 20px;
+      text-align: center;
+      background: rgba(191, 207, 187, 0.55);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+    }
+
+    .cta h3 {
+      font-size: 2rem;
+      margin-bottom: 18px;
+      color: #4f6656;
+    }
+
+    .cta p {
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .cta a {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #738A6E;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1rem;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .cta a:hover {
+      background: #5f7a66;
+      transform: translateY(-2px);
+    }
+
+    footer { text-align: center; padding: 25px; color: #738A6E; }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP NAV -->
+  <header>
+    <nav>
+      <a href="#home"><i class="fas fa-home"></i>Home</a>
+      <a href="#about"><i class="fas fa-info-circle"></i>About</a>
+      <a href="#services"><i class="fas fa-cogs"></i>Services</a>
+      <a href="#contact"><i class="fas fa-envelope"></i>Contact</a>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <div id="home" class="container">
+    <div class="company-name">MASOS WELLNESS GROUP</div>
+    <div class="tagline">Health | Healing | Hope</div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Us</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Background & Experience</h3>
+        <p>
+          Diploma in Counselling and Communication, BSc Social Science (Honours) in Psychology (SACAP), Certified Master Life Coach, Certified Corporate Wellness Specialist, Certified Trauma Support Specialist, Specialist Wellness Counsellor (ASCHP), Relational Intelligence Practitioner, Gestalt Play Therapy, Emotional Aid.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Years of Practice</h3>
+        <p>7 years supporting individuals, children, teens, couples, families, and groups.</p>
+      </div>
+      <div class="card">
+        <h3>Areas of Counselling</h3>
+        <p>
+          Personal empowerment, conflict resolution, communication skills, grief & bereavement, couples counselling, stress & anxiety management, anger management, intrapersonal and interpersonal skills development.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Counselling Philosophy & Approach</h3>
+        <p>
+          Faith-based, human-centred, insight-oriented, solution-focused, dignity-restoring, mindfulness-based. Integrative, trauma-informed, relational, strengths-based. Emotional containment, reflective dialogue, psycho-education, insight-oriented counselling.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Unique Approach</h3>
+        <p>
+          Balances emotional safety with clarity. Trauma-informed, insight-oriented, focuses on dignity, helping clients feel heard, steadier, clearer, and more confident.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Mission & Values</h3>
+        <p>
+          MASOS helps clients reconnect with inner strength and move forward with dignity. Core values: unconditional positive regard, trust, honesty, respect, kindness, acceptance, authenticity.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <h2>Services</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Counselling Services</h3>
+        <p>
+          Individual counselling, family counselling, group sessions, workshops for children, parents, teachers. Online & in-person sessions.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Workshops & Programs</h3>
+        <p>
+          Psycho-educational workshops covering interpersonal & intrapersonal skills, conflict resolution, self-esteem, emotional intelligence, resilience, multiple intelligences, parenting, social skills, emotional attunement, social-emotional learning.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Session Details</h3>
+        <p>
+          Individual sessions: R800 for 90 mins. Workshops & group programmes quoted based on needs. Resources provided include worksheets, guided exercises, reflection prompts.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Contact Details</h3>
+        <p>
+          Phone: +27 82 497 1106<br>
+          Email: masoswellness@gmail.com<br>
+          Instagram: @masos.za
+        </p>
+      </div>
+      <div class="card">
+        <h3>Office Location & Hours</h3>
+        <p>
+          56 Dundalk Avenue, Parkview, Greenside East, Johannesburg<br>
+          Mon–Fri: 8:00 – 18:00<br>
+          Sat: 8:00 – 14:00
+        </p>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps?q=56%20Dundalk%20Avenue,%20Parkview,%20Johannesburg&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALL TO ACTION -->
+  <section class="cta">
+    <h3>Ready to Take the Next Step?</h3>
+    <p>
+      Book a session with us today and start your journey towards Health, Healing & Hope. We provide a safe, supportive space to help you reconnect with your inner strength.
+    </p>
+    <a href="#contact">Book a Session</a>
+  </section>
+
+  <footer>
+    © 2026 MASOS WELLNESS GROUP. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
